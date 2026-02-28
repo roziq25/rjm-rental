@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - RJM Rental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .slide-up { animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; transform: translateY(50px); opacity: 0; }
+        @keyframes slideUp { to { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-100 text-black font-sans antialiased min-h-screen flex flex-col">
+
+    <header class="bg-black text-white p-5 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <nav class="space-x-6 font-semibold hidden md:block">
+                <a href="index.html" class="hover:text-gray-400 transition-colors">Home</a>
+                <a href="armada.html" class="hover:text-gray-400 transition-colors">Armada Mobil</a>
+                <a href="booking.html" class="border-b-2 border-white pb-1">Booking</a>
+            </nav>
+            <div class="text-2xl font-black tracking-widest flex items-center gap-2">
+                <span class="bg-white text-black px-2 py-1 rounded">RJM</span> RENTAL
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-5 flex-grow flex justify-center items-center">
+        <div class="bg-white p-8 md:p-12 border border-gray-300 shadow-2xl rounded-2xl w-full max-w-2xl slide-up">
+            <h1 class="text-3xl font-extrabold mb-2 text-center">Formulir Pemesanan</h1>
+            <p class="text-center text-gray-500 mb-8">Lengkapi data berikut, dan kami akan langsung melayani Anda melalui WhatsApp.</p>
+
+            <form id="formBooking" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block font-bold mb-1">Nama Lengkap</label>
+                        <input type="text" id="nama" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div>
+                        <label class="block font-bold mb-1">No. Telepon / WA</label>
+                        <input type="number" id="telepon" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: 0812...">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold mb-1">Pilih Armada</label>
+                    <select id="mobil" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors bg-white">
+                        <option value="" disabled selected>-- Pilih Mobil --</option>
+                        <option value="Toyota Innova">Toyota Innova</option>
+                        <option value="Toyota Avanza">Toyota Avanza</option>
+                        <option value="Honda Jazz">Honda Jazz</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block font-bold mb-1">Tanggal Sewa</label>
+                        <input type="date" id="tanggal" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors">
+                    </div>
+                    <div>
+                        <label class="block font-bold mb-1">Durasi (Hari)</label>
+                        <input type="number" id="durasi" min="1" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: 3">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold mb-1">Pesan Tambahan (Opsional)</label>
+                    <textarea id="pesan" rows="3" class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: Tolong siapkan baby car seat"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-lg uppercase tracking-wider">
+                    Kirim via WhatsApp
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white text-center p-4 mt-auto">
+        <p>&copy; 2026 RJM Rental. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        document.getElementById('formBooking').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form memuat ulang halaman
+
+            // Mengambil nilai dari setiap input
+            const nama = document.getElementById('nama').value;
+            const telepon = document.getElementById('telepon').value;
+            const mobil = document.getElementById('mobil').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const durasi = document.getElementById('durasi').value;
+            const pesan = document.getElementById('pesan').value;
+
+            // Nomor WhatsApp tujuan (Format: gunakan 62 di depan)
+            const nomor_wa = "6282297648211";
+
+            // Menyusun format pesan
+            const teks_wa = `Halo RJM Rental, saya ingin memesan mobil dengan detail berikut:\n\n` +
+                            `*Nama:* ${nama}\n` +
+                            `*No. Telepon:* ${telepon}\n` +
+                            `*Pilihan Mobil:* ${mobil}\n` +
+                            `*Tanggal Sewa:* ${tanggal}\n` +
+                            `*Durasi:* ${durasi} Hari\n` +
+                            `*Pesan Tambahan:* ${pesan ? pesan : '-'}\n\n` +
+                            `Apakah armada tersedia?`;
+
+            // Membuat link WhatsApp dan membukanya di tab baru
+            const url_whatsapp = `https://api.whatsapp.com/send?phone=${nomor_wa}&text=${encodeURIComponent(teks_wa)}`;
+            window.open(url_whatsapp, '_blank');
+        });
+    </script>
+</body>
+</html>
