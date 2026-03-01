@@ -5,7 +5,6 @@
     <title>Armada Mobil - RJM Rentcar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Konfigurasi Tailwind sama dengan index.html
         tailwind.config = {
           darkMode: 'class',
           theme: {
@@ -29,15 +28,12 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in-slide-up { opacity: 0; animation: fadeInSlideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-darkbg text-gray-900 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
 
     <header class="bg-black text-white shadow-2xl sticky top-0 z-50">
         <div class="container mx-auto px-5 py-4 flex justify-between items-center relative">
-            
             <a href="index.html" class="flex flex-col">
                 <div class="text-2xl sm:text-3xl font-black tracking-wider flex items-center">
                     <span class="text-accent">RJM</span> <span class="ml-2">RENTCAR</span>
@@ -97,7 +93,6 @@
 
         <div class="flex flex-wrap justify-center gap-3 mb-16">
             <a href="#keyless" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">Keyless</a>
-            <a href="#driver-bbm" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">Driver + BBM</a>
             <a href="#family-car" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">Family Car</a>
             <a href="#city-car" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">City Car</a>
             <a href="#mobil-suv" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">Mobil SUV</a>
@@ -105,181 +100,410 @@
             <a href="#minibus" class="px-5 py-2.5 bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:border-accent transition-all duration-300 shadow-sm">Minibus</a>
         </div>
 
-        <section id="keyless" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Kendaraan Keyless (Lepas Kunci)</h2>
+        <section id="keyless" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">Keyless (Lepas Kunci)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600" alt="Mobil Keyless" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Innova-reborn.jpg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Yaris (Keyless)</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Praktis tanpa kunci fisik, cocok untuk mobilitas cepat dalam kota.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Innova Reborn</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>⚙️ Transmisi: Automatic (CVT)</li>
-                            <li>👥 Kapasitas: 5 Penumpang</li>
-                            <li>⛽ BBM: Bensin</li>
+                            <li>⛽ Bahan Bakar : Diesel / Bensin</li>
+                            <li>💵 Harga : Rp 500.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                       <img src="images/Car/Brio.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Brio Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 5 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/xenia-x.webp">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Xenia Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Xenia old.webp">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Old Xenia Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Old avanza.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Old Avanza Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/new Avanza.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Avanza Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Xpander.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Xpander Keyless</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section id="driver-bbm" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Paket Driver + BBM</h2>
+        <section id="family-car" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">Family Car</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=600" alt="Driver BBM" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Innova-reborn.jpg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Innova Reborn All In</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Duduk manis dan nikmati perjalanan, harga sudah termasuk supir dan bensin.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Innova Reborn</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>👨‍✈️ Termasuk: Driver Berpengalaman</li>
-                            <li>⛽ Termasuk: BBM (Dalam Kota)</li>
-                            <li>👥 Kapasitas: 7 Penumpang</li>
+                            <li>⛽ Bahan Bakar : Diesel / Bensin</li>
+                            <li>💵 Harga : Rp 500.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/xenia-x.webp">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Xenia</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Xenia old.webp">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Old Xenia</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Old avanza.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Old Avanza</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/new Avanza.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Avanza</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Xpander.jpeg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">New Xpander</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 350.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section id="family-car" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Family Car (Mobil Keluarga)</h2>
+        <section id="city-car" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">City Car</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Toyota Avanza]
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Brio.jpeg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Avanza</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Mobil sejuta umat yang tangguh, lega, dan sangat irit BBM.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Honda Brio</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>⚙️ Transmisi: Manual / Automatic</li>
-                            <li>👥 Kapasitas: 7 Penumpang</li>
-                            <li>❄️ AC: Double Blower</li>
+                            <li>⛽ Bahan Bakar : Bensin</li>
+                            <li>💵 Harga : Rp 300.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual / Matic</li>
+                            <li>👥 Kapasitas : 5 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Toyota Innova]
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Innova</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Kenyamanan ekstra dengan suspensi empuk untuk keluarga.</p>
-                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>⚙️ Transmisi: Automatic / Manual</li>
-                            <li>👥 Kapasitas: 7 Penumpang</li>
-                            <li>⛽ BBM: Bensin / Diesel</li>
-                        </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
-                    </div>
-                </div>
+
             </div>
         </section>
 
-        <section id="city-car" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">City Car</h2>
+        <section id="mobil-suv" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">Mobil SUV</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Honda Brio/Jazz]
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Toyota-Fortuner.webp">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Honda Brio / Jazz</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Compact, gesit, dan sangat mudah untuk parkir di perkotaan.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Toyota Fortuner</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>⚙️ Transmisi: Automatic</li>
-                            <li>👥 Kapasitas: 5 Penumpang</li>
-                            <li>✨ Style: Sporty & Modern</li>
+                            <li>⛽ Bahan Bakar : Diesel</li>
+                            <li>💵 Harga : Rp 1.800.000 / Hari</li>
+                            <li>⚙️ Transmisi : Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                            <li>👥 Include Driver </li>
+                            <li>⛽ Include BBM dan Parkir </li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
+
+                <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/Pajero-Grey.jpg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Mitsubishi Pajero Sport</h3>
+                        <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+                            <li>⛽ Bahan Bakar : Diesel</li>
+                            <li>💵 Harga : Rp 1.600.000 / Hari</li>
+                            <li>⚙️ Transmisi : Matic</li>
+                            <li>👥 Kapasitas : 7 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>⏳ OT : 10% / Jam</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
+                            <li>👥 Include Driver </li>
+                            <li>⛽ Include BBM dan Parkir </li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section id="mobil-suv" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Mobil SUV</h2>
+        <section id="mobil-vip" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">Mobil VIP</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Fortuner/Pajero]
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/20240229_Leco-AutomotiveWeb_AC-004.jpg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Fortuner / Pajero</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Tangguh di segala medan dengan ground clearance tinggi.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Toyota Alphard (Driver & BBM)</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>⚙️ Transmisi: Automatic (4x2 / 4x4)</li>
-                            <li>👥 Kapasitas: 7 Penumpang</li>
-                            <li>⛰️ Medan: Offroad / Perkotaan</li>
+                            <li>⛽ Bahan Bakar : Termasuk (BBM)</li>
+                            <li>👨‍✈️ Driver : Termasuk (Supir)</li>
+                            <li>💵 Harga : 4.000.000</li>
+                            <li>⚙️ Transmisi : Matic</li>
+                            <li>👥 Kapasitas : 7 Seat (Captain Seat)</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section id="mobil-vip" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Mobil VIP (Premium)</h2>
+        <section id="minibus" class="mb-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white uppercase">Minibus</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Alphard/Vellfire]
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/HiAce-DRCtrans-Surabaya.webp">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Alphard / Vellfire</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Kemewahan tanpa batas untuk tamu VIP dan acara spesial.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Hiace Commuter (Driver & BBM)</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>💺 Kursi: Captain Seat Leather</li>
-                            <li>👥 Kapasitas: 6-7 Penumpang</li>
-                            <li>✨ Fitur: Panoramic Sunroof</li>
+                            <li>⛽ Bahan Bakar : Termasuk (BBM)</li>
+                            <li>👨‍✈️ Driver : Termasuk (Supir)</li>
+                            <li>💵 Harga : Rp 1.400.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual</li>
+                            <li>👥 Kapasitas : 14-15 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="minibus" class="mb-16 scroll-mt-24">
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-accent inline-block pb-2 text-gray-900 dark:text-white">Minibus (Rombongan)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                    <div class="h-56 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
-                        [Foto Toyota Hiace / Elf]
+                    <div class="h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 overflow-hidden">
+                        <img src="images/Car/hiace premio.jpeg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Toyota Hiace / Isuzu Elf</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 border-b border-gray-100 dark:border-gray-800 pb-4">Solusi terbaik untuk rombongan wisata atau perjalanan dinas.</p>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Hiace Premio (Driver & BBM)</h3>
                         <ul class="text-sm space-y-2 font-medium text-gray-700 dark:text-gray-300 mb-6 flex-grow">
-                            <li>👥 Kapasitas: 14 - 19 Penumpang</li>
-                            <li>❄️ AC: Per Kepala (Ducting)</li>
-                            <li>🧳 Bagasi: Luas</li>
+                            <li>⛽ Bahan Bakar : Termasuk (BBM)</li>
+                            <li>👨‍✈️ Driver : Termasuk (Supir)</li>
+                            <li>💵 Harga : Rp 1.500.000 / Hari</li>
+                            <li>⚙️ Transmisi : Manual</li>
+                            <li>👥 Kapasitas : 11-14 Seat</li>
+                            <li>⏱️ Durasi : Full Day</li>
+                            <li>📍 Jangkauan : Kota Banda Aceh</li>
                         </ul>
-                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">
-                            Booking Sekarang
-                        </a>
+                        <a href="booking.html" class="block w-full text-center bg-black dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-white transition-colors duration-300">Booking Sekarang</a>
                     </div>
                 </div>
+
             </div>
         </section>
 
