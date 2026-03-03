@@ -28,7 +28,7 @@
     <main class="container mx-auto py-12 px-5 flex-grow flex justify-center items-center">
         <div class="bg-white p-8 md:p-12 border border-gray-300 shadow-2xl rounded-2xl w-full max-w-2xl slide-up">
             <h1 class="text-3xl font-extrabold mb-2 text-center">Formulir Pemesanan</h1>
-            <p class="text-center text-gray-500 mb-8">Lengkapi data berikut, dan kami akan langsung melayani Anda melalui WhatsApp.</p>
+            <p class="text-center text-gray-500 mb-8">Data mobil dan harga akan terisi otomatis dari pilihan Anda sebelumnya.</p>
 
             <form id="formBooking" class="space-y-5">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -38,34 +38,29 @@
                     </div>
                     <div>
                         <label class="block font-bold mb-1">No. Telepon / WA</label>
-                        <input type="number" id="telepon" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: 0812...">
+                        <input type="number" id="telepon" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: 08123456789">
                     </div>
-                </div>
-
-                <div>
-                    <label class="block font-bold mb-1">Pilih Armada</label>
-                    <select id="mobil" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors bg-white">
-                        <option value="" disabled selected>-- Pilih Mobil --</option>
-                        <option value="Toyota Innova">Toyota Innova</option>
-                        <option value="Toyota Avanza">Toyota Avanza</option>
-                        <option value="Honda Jazz">Honda Jazz</option>
-                    </select>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block font-bold mb-1">Mobil yang Dipilih</label>
+                        <input type="text" id="mobil" readonly class="w-full border-2 border-gray-200 p-3 rounded bg-gray-100 font-semibold text-blue-800 outline-none" placeholder="Memuat...">
+                    </div>
+                    <div>
+                        <label class="block font-bold mb-1">Harga per Hari</label>
+                        <input type="text" id="harga" readonly class="w-full border-2 border-gray-200 p-3 rounded bg-gray-100 font-semibold text-blue-800 outline-none" placeholder="Memuat...">
+                    </div>
                     <div>
                         <label class="block font-bold mb-1">Tanggal Sewa</label>
                         <input type="date" id="tanggal" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors">
                     </div>
                     <div>
                         <label class="block font-bold mb-1">Durasi (Hari)</label>
-                        <input type="number" id="durasi" min="1" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: 3">
+                        <input type="number" id="durasi" min="1" required class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Berapa hari?">
                     </div>
                 </div>
 
                 <div>
                     <label class="block font-bold mb-1">Pesan Tambahan (Opsional)</label>
-                    <textarea id="pesan" rows="3" class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: Tolong siapkan baby car seat"></textarea>
+                    <textarea id="pesan" rows="3" class="w-full border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-black transition-colors" placeholder="Contoh: Jemput di Bandara"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-gray-800 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-lg uppercase tracking-wider">
@@ -76,35 +71,64 @@
     </main>
 
     <footer class="bg-black text-white text-center p-4 mt-auto">
-        <p>&copy; 2026 RJM Rental. Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 RJM Rental. All rights reserved.</p>
     </footer>
 
     <script>
-        document.getElementById('formBooking').addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah form memuat ulang halaman
+        // 1. FUNGSI MENGAMBIL DATA DARI URL (DARI FILE ARMADA)
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
 
-            // Mengambil nilai dari setiap input
+        // Jalankan saat halaman dibuka
+        window.onload = function() {
+            const mobilDipilih = getUrlParameter('mobil');
+            const hargaDipilih = getUrlParameter('harga');
+
+            if (mobilDipilih) {
+                document.getElementById('mobil').value = mobilDipilih;
+            } else {
+                document.getElementById('mobil').value = "Pilih mobil di menu Armada";
+            }
+
+            if (hargaDipilih) {
+                document.getElementById('harga').value = "Rp " + hargaDipilih + " / Hari";
+            }
+        };
+
+        // 2. LOGIKA PENGIRIMAN FORM KE WHATSAPP
+        document.getElementById('formBooking').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Daftar 2 nomor WhatsApp Admin
+            const daftar_nomor = ["6285314632547", "628972915282"];
+            // Pilih nomor secara acak (rotasi)
+            const nomor_wa = daftar_nomor[Math.floor(Math.random() * daftar_nomor.length)];
+
+            // Ambil data input
             const nama = document.getElementById('nama').value;
             const telepon = document.getElementById('telepon').value;
             const mobil = document.getElementById('mobil').value;
+            const harga = document.getElementById('harga').value;
             const tanggal = document.getElementById('tanggal').value;
             const durasi = document.getElementById('durasi').value;
             const pesan = document.getElementById('pesan').value;
 
-            // Nomor WhatsApp tujuan (Format: gunakan 62 di depan)
-            const nomor_wa = "6282297648211";
-
-            // Menyusun format pesan
+            // Susun pesan WhatsApp
             const teks_wa = `Halo RJM Rental, saya ingin memesan mobil dengan detail berikut:\n\n` +
                             `*Nama:* ${nama}\n` +
                             `*No. Telepon:* ${telepon}\n` +
                             `*Pilihan Mobil:* ${mobil}\n` +
+                            `*Harga Sewa:* ${harga}\n` +
                             `*Tanggal Sewa:* ${tanggal}\n` +
                             `*Durasi:* ${durasi} Hari\n` +
                             `*Pesan Tambahan:* ${pesan ? pesan : '-'}\n\n` +
                             `Apakah armada tersedia?`;
 
-            // Membuat link WhatsApp dan membukanya di tab baru
+            // Buka link WhatsApp
             const url_whatsapp = `https://api.whatsapp.com/send?phone=${nomor_wa}&text=${encodeURIComponent(teks_wa)}`;
             window.open(url_whatsapp, '_blank');
         });
