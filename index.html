@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id" class="light"> <head>
+<html lang="id" class="light"> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJM Rentcar | Sewa Mobil Banda Aceh</title>
@@ -11,70 +12,84 @@
             extend: {
               colors: {
                 accent: '#024175', 
-                darkbg: '#0a0a0a', 
+                darkbg: '#0a0a0a',
+                cardbg: '#141414'
+              },
+              fontFamily: {
+                sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
               }
             }
           }
         }
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+        
         html { scroll-behavior: smooth; }
-        :root { --color-primary: #111827; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .ornament-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm28-65c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm23-11c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-6 90c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm33-74c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z' fill='%23e5e7eb' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-            background-size: 150px 150px;
-        }
-
-        .dark .ornament-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm28-65c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm23-11c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-6 90c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm33-74c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z' fill='%231f2937' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-
         @keyframes fadeInSlideUp {
-            from { opacity: 0; transform: translateY(40px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in-slide-up { opacity: 0; animation: fadeInSlideUp 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
+        
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        .animate-fade-in-slide-up { opacity: 0; animation: fadeInSlideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
+        .delay-100 { animation-delay: 0.15s; }
+        .delay-200 { animation-delay: 0.3s; }
+        .delay-300 { animation-delay: 0.45s; }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-darkbg text-gray-900 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
 
-    <header class="bg-black text-white shadow-2xl sticky top-0 z-50">
+    <header class="bg-black/90 backdrop-blur-md text-white shadow-lg sticky top-0 z-50 border-b border-gray-800">
         <div class="container mx-auto px-5 py-4 flex justify-between items-center relative">
             
-            <a href="index.html" class="flex flex-col">
-                <div class="text-2xl sm:text-3xl font-black tracking-wider flex items-center">
+            <a href="index.html" class="flex flex-col group">
+                <div class="text-2xl sm:text-3xl font-black tracking-wider flex items-center group-hover:scale-105 transition-transform duration-300">
                     <span class="text-accent">RJM</span> <span class="ml-2">RENTCAR</span>
                 </div>
-                <div class="text-[0.6rem] sm:text-xs font-bold tracking-widest text-gray-300 uppercase">
+                <div class="text-[0.6rem] sm:text-xs font-bold tracking-widest text-gray-400 uppercase group-hover:text-gray-200 transition-colors" data-id="Sewa Mobil Banda Aceh" data-en="Banda Aceh Car Rental">
                     Sewa Mobil Banda Aceh
                 </div>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
                 <nav class="flex space-x-6 font-semibold items-center text-sm uppercase tracking-wide">
-                    <a href="index.html" class="text-accent border-b-2 border-accent pb-1 transition-colors">Home</a>
-                    <a href="armada.html" class="text-gray-300 hover:text-white transition-colors">Armada Mobil</a>
-                    <a href="booking.html" class="text-gray-300 hover:text-white transition-colors">Booking</a>
+                    <a href="index.html" class="text-accent border-b-2 border-accent pb-1 transition-colors" data-id="Home" data-en="Home">Home</a>
+                    <a href="armada.html" class="text-gray-300 hover:text-white transition-colors" data-id="Armada Mobil" data-en="Our Fleet">Armada Mobil</a>
+                    <a href="booking.html" class="text-gray-300 hover:text-white transition-colors" data-id="Booking" data-en="Booking">Booking</a>
                 </nav>
                 
-                <button id="theme-toggle" class="p-2 rounded-full bg-gray-800 text-gray-400 hover:text-accent focus:outline-none transition-all duration-300">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                </button>
+                <div class="flex items-center space-x-3 border-l border-gray-700 pl-6">
+                    <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-accent font-bold text-sm focus:outline-none transition-all duration-300">
+                        ID
+                    </button>
+
+                    <button id="theme-toggle" class="p-2.5 rounded-full bg-gray-800 text-gray-400 hover:text-accent focus:outline-none transition-all duration-300 hover:bg-gray-700">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
             </div>
 
-            <div class="md:hidden flex items-center gap-4">
+            <div class="md:hidden flex items-center gap-3">
+                <button id="lang-toggle-mobile" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 text-gray-300 hover:text-white font-bold text-xs focus:outline-none transition-all duration-300">ID</button>
                 <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-800 text-gray-400 hover:text-accent focus:outline-none transition-all duration-300">
                     <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 </button>
-                <button id="mobile-menu-btn" class="text-gray-300 hover:text-accent focus:outline-none">
+                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition-colors">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
@@ -82,271 +97,436 @@
             </div>
         </div>
 
-        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
         
-        <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white dark:bg-darkbg shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 flex flex-col md:hidden">
-            <div class="p-5 flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
-                <span class="font-black text-xl text-gray-900 dark:text-white"><span class="text-accent">RJM</span> MENU</span>
-                <button id="close-menu-btn" class="text-gray-500 hover:text-accent font-bold text-xl p-2">×</button>
+        <div id="mobile-menu" class="fixed top-0 left-0 w-72 h-full bg-white dark:bg-cardbg shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 flex flex-col md:hidden border-r border-gray-200 dark:border-gray-800">
+            <div class="p-6 flex justify-between items-center border-b border-gray-100 dark:border-gray-800">
+                <span class="font-black text-2xl text-gray-900 dark:text-white"><span class="text-accent">RJM</span> MENU</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-red-500 transition-colors p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
             </div>
-            <nav class="flex flex-col px-5 py-6 space-y-6 font-semibold text-sm uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                <a href="index.html" class="text-accent border-b border-gray-100 dark:border-gray-800 pb-2">Home</a>
-                <a href="armada.html" class="hover:text-accent border-b border-gray-100 dark:border-gray-800 pb-2 transition-colors">Armada Mobil</a>
-                <a href="booking.html" class="hover:text-accent border-b border-gray-100 dark:border-gray-800 pb-2 transition-colors">Booking</a>
+            <nav class="flex flex-col px-6 py-8 space-y-6 font-bold text-sm uppercase tracking-wide text-gray-700 dark:text-gray-300">
+                <a href="index.html" class="text-accent flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-accent"></span><span data-id="Home" data-en="Home">Home</span></a>
+                <a href="armada.html" class="hover:text-accent transition-colors flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-transparent border border-gray-400"></span><span data-id="Armada Mobil" data-en="Our Fleet">Armada Mobil</span></a>
+                <a href="booking.html" class="hover:text-accent transition-colors flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-transparent border border-gray-400"></span><span data-id="Booking" data-en="Booking">Booking</span></a>
             </nav>
         </div>
     </header>
 
-    <main class="flex flex-col items-center justify-center text-center p-8 sm:p-16 bg-white dark:bg-darkbg border-b border-gray-100 dark:border-gray-900 animate-fade-in-slide-up">
-        <h1 class="text-4xl sm:text-6xl font-extrabold mb-5 uppercase tracking-tight leading-tight">
-            Eksplorasi Aceh <span class="text-accent relative inline-block">Tanpa Batas<svg class="absolute -bottom-2 w-full h-3 text-accent/40" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="transparent"/></svg></span>
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl">Perjalanan bisnis, liburan keluarga, atau sekadar berkeliling kota. RJM Rentcar siap menemani setiap kilometer perjalanan Anda dengan elegan, nyaman, dan andal.</p>
+    <main class="relative bg-gradient-to-b from-white to-gray-50 dark:from-darkbg dark:to-[#0f0f0f] pt-10 pb-20 border-b border-gray-200 dark:border-gray-900 overflow-hidden">
         
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="armada.html" class="bg-black dark:bg-white text-white dark:text-black px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white hover:scale-105 transition-all duration-300 shadow-xl shadow-accent/20">
-                Booking Sekarang
-            </a>
-            <a href="#lokasi" class="bg-transparent border-2 border-black dark:border-white text-black dark:text-white px-8 py-3.5 rounded-full font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
-                Lokasi
-            </a>
-            <a href="#social-media" class="bg-transparent border-2 border-black dark:border-white text-black dark:text-white px-8 py-3.5 rounded-full font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
-                Social Media
-            </a>
+        <div class="absolute top-10 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob dark:opacity-10 dark:bg-blue-900 z-0 pointer-events-none"></div>
+        <div class="absolute top-10 right-0 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000 dark:opacity-10 dark:bg-blue-800 z-0 pointer-events-none"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-gray-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000 dark:opacity-10 dark:bg-gray-700 z-0 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 md:px-5 relative z-10 animate-fade-in-slide-up">
+            <div class="relative w-full max-w-6xl mx-auto min-h-[650px] sm:min-h-[550px] md:min-h-[480px] overflow-hidden rounded-3xl bg-white dark:bg-cardbg shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-gray-800 group">
+                
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-100 z-10">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">Premium MPV</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Innova Reborn</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Memberikan pengalaman berkendara yang premium dan tangguh, sangat cocok untuk keluarga dan dinas." data-en="Provides a premium and tough driving experience, perfect for family and business trips.">Memberikan pengalaman berkendara yang premium dan tangguh, sangat cocok untuk keluarga dan dinas.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 2393cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="7 Kursi" data-en="7 Seats">7 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto/MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Diesel</div>
+                        </div>
+                        <a href="booking.html?mobil=Innova+Reborn&harga=500.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Innova-reborn.png" alt="Innova Reborn" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">Family MPV</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Xpander</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Terus Expand Adventure dalam hidup Anda bersama keluarga dengan kenyamanan ekstra dan desain modern." data-en="Expand the adventure in your life with extra comfort and modern design for your family.">Terus Expand Adventure dalam hidup Anda bersama keluarga dengan kenyamanan ekstra dan desain modern.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 1499cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="7 Kursi" data-en="7 Seats">7 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto/MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Bensin</div>
+                        </div>
+                        <a href="booking.html?mobil=Allin+New+Expander&harga=750.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Xpander.png" alt="Xpander" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">City Car</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Honda Brio</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Compact, lincah, dan irit bahan bakar. Solusi mobilitas city car terbaik untuk menjelajahi dalam kota." data-en="Compact, agile, and fuel-efficient. The best city car mobility solution to explore the city.">Compact, lincah, dan irit bahan bakar. Solusi mobilitas city car terbaik untuk menjelajahi dalam kota.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 1199cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="5 Kursi" data-en="5 Seats">5 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto/MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Bensin</div>
+                        </div>
+                        <a href="booking.html?mobil=Brio&harga=300.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Brio.png" alt="Honda Brio" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">Family MPV</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Toyota Avanza</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Mobil keluarga sejuta umat yang tangguh, irit, dan andal untuk segala perjalanan Anda." data-en="The robust, efficient, and reliable family car for all your journeys.">Mobil keluarga sejuta umat yang tangguh, irit, dan andal untuk segala perjalanan Anda.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 1329cc/1496cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="7 Kursi" data-en="7 Seats">7 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto/MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Bensin</div>
+                        </div>
+                        <a href="booking.html?mobil=New+Avanza&harga=350.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Avanza.png" alt="Toyota Avanza" onerror="this.src='images/Car/Innova-reborn.png'" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">Premium SUV</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Fortuner</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Tampil gagah dan tangguh di segala medan. Pilihan tepat untuk perjalanan eksklusif dan petualangan Anda." data-en="Looks bold and tough in all terrains. The perfect choice for exclusive journeys and adventures.">Tampil gagah dan tangguh di segala medan. Pilihan tepat untuk perjalanan eksklusif dan petualangan Anda.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 2393cc/2755cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="7 Kursi" data-en="7 Seats">7 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto/MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Diesel</div>
+                        </div>
+                        <a href="booking.html?mobil=Toyota+Fortuner&harga=1.800.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Fortuner.png" alt="Toyota Fortuner" onerror="this.src='images/Car/Innova-reborn.png'" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">VIP MPV</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Alphard</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Kemewahan tiada tara dengan kenyamanan first-class. Didesain untuk melayani perjalanan VIP Anda." data-en="Unparalleled luxury with first-class comfort. Designed to serve your VIP journeys.">Kemewahan tiada tara dengan kenyamanan first-class. Didesain untuk melayani perjalanan VIP Anda.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 2494cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="6/7 Kursi" data-en="6/7 Seats">6/7 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> Auto</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Bensin</div>
+                        </div>
+                        <a href="booking.html?mobil=Toyota+Alphard&harga=4.000.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Alphard.png" alt="Toyota Alphard" onerror="this.src='images/Car/Innova-reborn.png'" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="carousel-slide absolute inset-0 transition-all duration-700 ease-in-out flex flex-col md:flex-row items-center justify-center p-6 sm:p-10 md:p-16 opacity-0 z-0">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-20 order-2 md:order-1 mt-6 md:mt-0">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-accent bg-blue-100 dark:bg-blue-900/30 rounded-full">Minibus Premium</div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">Hiace Premio</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base md:text-lg" data-id="Kapasitas besar dengan kenyamanan ekstra. Ideal untuk perjalanan wisata rombongan atau keluarga besar." data-en="Large capacity with extra comfort. Ideal for group tours or large family trips.">Kapasitas besar dengan kenyamanan ekstra. Ideal untuk perjalanan wisata rombongan atau keluarga besar.</p>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-gray-700 dark:text-gray-300 font-bold text-sm sm:text-base mb-8 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⚙️</span> 2755cc</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">👥</span> <span data-id="12-15 Kursi" data-en="12-15 Seats">12-15 Kursi</span></div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">🕹️</span> MT</div>
+                            <div class="flex items-center gap-2"><span class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-accent">⛽</span> Diesel</div>
+                        </div>
+                        <a href="booking.html?mobil=Hiace+Premio&harga=1.500.000" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(2,65,117,0.3)] dark:shadow-[0_10px_20px_rgba(255,255,255,0.1)] w-full md:w-auto" data-id="Sewa Mobil Ini" data-en="Rent This Car">Sewa Mobil Ini</a>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center z-10 relative order-1 md:order-2">
+                        <div class="absolute top-0 right-0 z-30 opacity-50 text-right pr-4 pt-4 md:pr-0 md:pt-0">
+                            <span class="text-accent font-black text-xl md:text-2xl">RJM</span><br><span class="text-gray-400 font-bold text-xs md:text-sm">RENTCAR</span>
+                        </div>
+                        <img src="images/Car/Hiace-premio.png" alt="Hiace Premio" onerror="this.src='images/Car/Innova-reborn.png'" class="w-full max-w-sm md:max-w-lg lg:max-w-xl max-h-[220px] md:max-h-[350px] object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="absolute bottom-5 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+                    <button class="indicator w-10 h-2.5 rounded-full bg-accent transition-all duration-300 focus:outline-none" onclick="goToSlide(0)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(1)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(2)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(3)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(4)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(5)"></button>
+                    <button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 transition-all duration-300 focus:outline-none" onclick="goToSlide(6)"></button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10">
+                <a href="armada.html" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-black dark:border-white text-black dark:text-white px-8 py-3.5 rounded-full font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-105 transition-all duration-300 w-full sm:w-auto" data-id="Lihat Semua Armada Kami" data-en="See All Our Fleet">
+                    Lihat Semua Armada Kami
+                </a>
+                
+                <button onclick="document.getElementById('lokasi-kami').scrollIntoView({behavior:'smooth', block: 'start'})" class="inline-flex items-center justify-center gap-2 bg-accent text-white border-2 border-accent px-8 py-3.5 rounded-full font-bold hover:bg-[#022f54] hover:border-[#022f54] hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-lg" data-id="Lokasi Kami" data-en="Our Location">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Lokasi Kami
+                </button>
+            </div>
+        </div>
+        
+        <section id="tentang-kami" class="mt-20 pt-16 bg-white dark:bg-[#0a0a0a] border-y border-gray-100 dark:border-gray-900 relative z-20">
+            <div class="container mx-auto px-5 pb-16">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+                    <div class="w-full md:w-1/2 text-center md:text-left z-10 animate-fade-in-slide-up delay-100">
+                        <div class="inline-block px-4 py-1.5 mb-4 text-sm font-bold uppercase tracking-widest text-accent bg-blue-50 dark:bg-blue-900/20 rounded-full border border-blue-100 dark:border-blue-900" data-id="Tentang RJM Rentcar" data-en="About RJM Rentcar">Tentang RJM Rentcar</div>
+                        
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-gray-900 dark:text-white leading-tight" data-id="Eksplorasi Aceh <br> <span class='text-accent'>Tanpa Batas</span>" data-en="Explore Aceh <br> <span class='text-accent'>Limitlessly</span>">
+                            Eksplorasi Aceh <br> <span class="text-accent">Tanpa Batas</span>
+                        </h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-base md:text-lg leading-relaxed" data-id="Perjalanan bisnis, liburan keluarga, atau sekadar berkeliling kota. <strong>RJM Rentcar</strong> hadir sebagai penyedia layanan rental mobil terpercaya di Banda Aceh. Kami berkomitmen memberikan armada yang selalu prima, bersih, dan nyaman. RJM Rentcar memastikan pengalaman berkendara yang aman, eksklusif, dan tak terlupakan di Serambi Mekkah." data-en="Business trips, family vacations, or just getting around the city. <strong>RJM Rentcar</strong> is here as a trusted car rental service provider in Banda Aceh. We are committed to providing fleets that are always in prime condition, clean, and comfortable. RJM Rentcar ensures a safe, exclusive, and unforgettable driving experience.">
+                            Perjalanan bisnis, liburan keluarga, atau sekadar berkeliling kota. <strong>RJM Rentcar</strong> (CV Rintis Jaya Mandiri) hadir sebagai penyedia layanan rental mobil terpercaya di Banda Aceh. Kami berkomitmen memberikan armada yang selalu prima, bersih, dan nyaman. Dengan driver yang berpengalaman dan profesional, kenyamanan Anda adalah prioritas utama kami. RJM Rentcar memastikan pengalaman berkendara yang aman, eksklusif, dan tak terlupakan di Serambi Mekkah.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center mb-8">
+                            <a href="https://wa.me/628531463254" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-bold hover:bg-[#1ebd5b] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_15px_rgba(37,211,102,0.3)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                Admin 1 (Mirza)
+                            </a>
+                            <a href="https://wa.me/628972915282" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-bold hover:bg-[#1ebd5b] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_15px_rgba(37,211,102,0.3)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                Admin 2 (Syarif)
+                            </a>
+                        </div>
+
+                        <div class="mt-8 border-t border-gray-200 dark:border-gray-800 pt-6">
+                            <p class="text-sm font-bold text-gray-500 dark:text-gray-400 mb-4 uppercase tracking-wider" data-id="Temukan Kami di Media Sosial" data-en="Find Us on Social Media">Temukan Kami di Media Sosial</p>
+                            <div class="flex justify-center md:justify-start gap-4">
+                                <a href="https://www.instagram.com/rentalmobilbandaaceh99?igsh=ejE5OXllbzAwMWQw" target="_blank" class="p-3 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-gradient-to-tr hover:from-purple-500 hover:to-orange-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"/></svg>
+                                </a>
+                                <a href="#" target="_blank" class="p-3 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 flex justify-center relative animate-fade-in-slide-up delay-200">
+                        <div class="absolute inset-0 bg-accent/10 dark:bg-accent/20 rounded-full blur-3xl transform scale-75"></div>
+                        <img src="images/WhatsApp Image 2026-02-28 at 13.17.24-Photoroom.png" onerror="this.src='images/Car/Innova-reborn.png'" alt="RJM Rentcar" class="relative z-10 w-full max-w-[16rem] sm:max-w-[20rem] md:max-w-[24rem] object-contain hover:scale-105 transition-all duration-500 drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-20 sm:mt-28 bg-transparent w-full pb-10">
+            <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-4 md:gap-6 px-4 sm:px-10 justify-start lg:justify-center animate-fade-in-slide-up delay-200">
+                <div class="relative w-[85vw] sm:w-[320px] md:w-[360px] h-[220px] md:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+                    <img src="images/banyak_pilihan.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out opacity-90 group-hover:opacity-100" alt="Banyak Pilihan">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-12 h-1.5 bg-accent mb-3 transform origin-left scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></div>
+                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wide transform translate-y-1 group-hover:-translate-y-1 transition-transform duration-300" data-id="Banyak Pilihan Unit" data-en="Many Fleet Choices">Banyak Pilihan Unit</h3>
+                    </div>
+                </div>
+                <div class="relative w-[85vw] sm:w-[320px] md:w-[360px] h-[220px] md:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+                    <img src="images/terjaga.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out opacity-90 group-hover:opacity-100" alt="Unit Terawat">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-12 h-1.5 bg-accent mb-3 transform origin-left scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></div>
+                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wide transform translate-y-1 group-hover:-translate-y-1 transition-transform duration-300" data-id="Unit Bersih & Terawat" data-en="Clean & Well-Maintained">Unit Bersih & Terawat</h3>
+                    </div>
+                </div>
+                <div class="relative w-[85vw] sm:w-[320px] md:w-[360px] h-[220px] md:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+                    <img src="images/driver.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out opacity-90 group-hover:opacity-100" alt="Driver Profesional">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-12 h-1.5 bg-accent mb-3 transform origin-left scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></div>
+                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wide transform translate-y-1 group-hover:-translate-y-1 transition-transform duration-300" data-id="Driver Profesional" data-en="Professional Driver">Driver Profesional</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <section class="bg-gray-50 dark:bg-[#0f0f0f] pt-20 pb-16 animate-fade-in-slide-up delay-100 border-b border-gray-200 dark:border-gray-900 overflow-hidden">
+    <section class="bg-gray-100 dark:bg-[#0f0f0f] py-20 px-5 border-y border-gray-200 dark:border-gray-900 overflow-hidden relative" id="wisata">
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16 animate-fade-in-slide-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold text-sm mb-4" data-id="Destinasi Wisata" data-en="Tourist Destinations">
+                    Destinasi Wisata
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-4 text-gray-900 dark:text-white tracking-tight" data-id="Eksplorasi <span class='text-accent'>Pesona Aceh</span>" data-en="Explore the <span class='text-accent'>Beauty of Aceh</span>">Eksplorasi <span class="text-accent">Pesona Aceh</span></h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed" data-id="RJM Rentcar siap mengantarkan Anda menikmati pesona wisata alam, budaya, dan sejarah terbaik di Nanggroe Aceh Darussalam dengan nyaman." data-en="RJM Rentcar is ready to drive you to enjoy the best natural, cultural, and historical tourism in Aceh comfortably.">RJM Rentcar siap mengantarkan Anda menikmati pesona wisata alam, budaya, dan sejarah terbaik di Nanggroe Aceh Darussalam dengan nyaman.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-3xl overflow-hidden relative h-[380px] shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-200 dark:bg-gray-800 animate-fade-in-slide-up delay-100">
+                    <img src="images/Mesjid_raya.jpg" alt="Masjid Raya Baiturrahman" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
+                        <div class="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-bold text-white bg-accent rounded-full border border-white/20 shadow-sm" data-id="Wisata Religi & Sejarah" data-en="Religious & Historical">Wisata Religi & Sejarah</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Masjid Raya Baiturrahman</h3>
+                            <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3" data-id="Ikon spiritual dan sejarah kebanggaan masyarakat Aceh yang berdiri tegak dan megah di pusat kota Banda Aceh." data-en="A spiritual and historical icon, the pride of the Acehnese people, standing tall and majestic in the city center.">Ikon spiritual dan sejarah kebanggaan masyarakat Aceh yang berdiri tegak dan megah di pusat kota Banda Aceh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group rounded-3xl overflow-hidden relative h-[380px] shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-200 dark:bg-gray-800 animate-fade-in-slide-up delay-200">
+                    <img src="images/pantai_lhoknga.jpeg" alt="Pantai Lhoknga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
+                        <div class="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-bold text-white bg-blue-500 rounded-full border border-white/20 shadow-sm" data-id="Wisata Alam" data-en="Nature Tourism">Wisata Alam</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Pantai Lhoknga</h3>
+                            <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3" data-id="Pesona ombak memukau dan pasir putih berseling pepohonan rindang yang siap memanjakan mata serta melepas penat Anda." data-en="Stunning waves and white sand amidst shady trees ready to spoil your eyes and relieve your fatigue.">Pesona ombak memukau dan pasir putih berseling pepohonan rindang yang siap memanjakan mata serta melepas penat Anda.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group rounded-3xl overflow-hidden relative h-[380px] shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-200 dark:bg-gray-800 animate-fade-in-slide-up delay-300">
+                    <img src="images/museum_tsunami.jpg" alt="Museum Tsunami" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
+                        <div class="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-bold text-white bg-gray-600 rounded-full border border-white/20 shadow-sm" data-id="Edukasi & Sejarah" data-en="Education & History">Edukasi & Sejarah</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Museum Tsunami</h3>
+                            <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3" data-id="Monumen peringatan penuh haru dengan arsitektur memukau karya Ridwan Kamil untuk mengenang tragedi 2004 silam." data-en="A deeply moving memorial monument with stunning architecture by Ridwan Kamil to commemorate the 2004 tragedy.">Monumen peringatan penuh haru dengan arsitektur memukau karya Ridwan Kamil untuk mengenang tragedi 2004 silam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi-kami" class="bg-white dark:bg-[#0a0a0a] py-16 sm:py-24 px-5">
+        <div class="container mx-auto">
+            <div class="text-center mb-10 animate-fade-in-slide-up">
+                <h2 class="text-3xl font-extrabold border-b-2 border-accent inline-block pb-2 mb-4 uppercase tracking-widest text-gray-900 dark:text-white" data-id="Lokasi Kami" data-en="Our Location">Lokasi Kami</h2>
+                <p class="text-gray-600 dark:text-gray-400" data-id="Temukan pool / kantor RJM Rentcar di Banda Aceh." data-en="Find the RJM Rentcar pool/office in Banda Aceh.">Temukan pool / kantor RJM Rentcar di Banda Aceh.</p>
+            </div>
+            <div class="w-full max-w-5xl mx-auto h-[400px] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg animate-fade-in-slide-up delay-200 border border-gray-200 dark:border-gray-800">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0425313331613!2d95.32049187389886!3d5.560662994419912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304037142718e8d1%3A0xcdaee4c632e85ef0!2sBanda%20Aceh%2C%20Kota%20Banda%20Aceh%2C%20Aceh!5e0!3m2!1sid!2sid!4v1711204639943!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-auto relative z-20">
         <div class="container mx-auto px-5">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
-                
-                <div class="w-full md:w-1/2 flex justify-center relative">
-                    <img src="images/WhatsApp Image 2026-02-28 at 13.17.24-Photoroom.png" alt="Logo CV Rintis Jaya Mandiri" class="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-[20rem] object-contain hover:scale-105 transition-transform duration-500 drop-shadow-2xl">
-                </div>
-
-                <div class="w-full md:w-1/2 text-center md:text-left z-10">
-                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-wide mb-6 text-gray-900 dark:text-white">
-                        Tentang <span class="text-accent">RJM Rentcar</span>
-                    </h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-                        Kami hadir memberikan solusi mobilitas terbaik. Didukung oleh armada terbaru dan tim profesional, kenyamanan Anda adalah prioritas utama kami. RJM Rentcar memastikan pengalaman berkendara yang aman dan tak terlupakan di Serambi Mekkah.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <span class="text-2xl font-black tracking-wider flex items-center mb-4 text-gray-900 dark:text-white"><span class="text-accent">RJM</span> <span class="ml-2">RENTCAR</span></span>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4" data-id="Layanan rental mobil terpercaya di Banda Aceh. Menyediakan berbagai pilihan armada yang selalu prima dan terjaga kebersihannya untuk menemani setiap perjalanan Anda di Nanggroe Aceh Darussalam." data-en="Trusted car rental service in Banda Aceh. Providing various fleet choices that are always in prime condition and kept clean to accompany every journey in Aceh.">
+                        Layanan rental mobil terpercaya di Banda Aceh. Menyediakan berbagai pilihan armada yang selalu prima dan terjaga kebersihannya untuk menemani setiap perjalanan Anda di Nanggroe Aceh Darussalam.
                     </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="https://wa.me/628531463254" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-3.5 rounded-full font-bold hover:bg-green-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-green-500/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            Admin 1 (Mirza)
-                        </a>
-
-                        <a href="https://wa.me/628972915282" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-3.5 rounded-full font-bold hover:bg-green-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-green-500/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            Admin 2 (Roziq)
-                        </a>
-                    </div>
+                </div>
+                
+                <div class="md:ml-auto">
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider" data-id="Menu Utama" data-en="Main Menu">Menu Utama</h4>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm font-semibold">
+                        <li><a href="index.html" class="hover:text-accent transition-colors" data-id="Home" data-en="Home">Home</a></li>
+                        <li><a href="armada.html" class="hover:text-accent transition-colors" data-id="Armada Mobil" data-en="Our Fleet">Armada Mobil</a></li>
+                        <li><a href="booking.html" class="hover:text-accent transition-colors" data-id="Booking" data-en="Booking">Booking</a></li>
+                        <li><button onclick="document.getElementById('lokasi-kami').scrollIntoView({behavior:'smooth'})" class="hover:text-accent transition-colors focus:outline-none" data-id="Lokasi Kami" data-en="Location">Lokasi Kami</button></li>
+                    </ul>
                 </div>
 
-            </div>
-        </div>
-
-        <div class="mt-20 w-full bg-white dark:bg-darkbg py-10 border-y border-gray-200 dark:border-gray-900 shadow-inner">
-            <div class="container mx-auto px-5 mb-4 flex justify-between items-end">
-                <h3 class="text-xl font-bold uppercase tracking-wider text-gray-400">Keunggulan Kami</h3>
-                <span class="text-xs text-gray-400 flex items-center gap-1 animate-pulse">Geser <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                <div class="md:ml-auto">
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider" data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent">📍</span>
+                            <span data-id="Banda Aceh, Nanggroe Aceh Darussalam" data-en="Banda Aceh, Aceh, Indonesia">Banda Aceh, Nanggroe Aceh Darussalam</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-accent">📞</span>
+                            <a href="https://wa.me/628531463254" class="hover:text-accent transition-colors">0853-1463-254 (Mirza)</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-accent">📞</span>
+                            <a href="https://wa.me/628972915282" class="hover:text-accent transition-colors">0897-2915-282 (Syarif)</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="flex overflow-x-auto gap-6 px-5 pb-6 snap-x snap-mandatory hide-scrollbar">
-                <div class="relative w-[300px] h-[200px] sm:w-[380px] sm:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800">
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" alt="Banyak Pilihan">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                        <div class="w-10 h-1 bg-accent mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Banyak Pilihan</h3>
-                    </div>
-                </div>
-                <div class="relative w-[300px] h-[200px] sm:w-[380px] sm:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800">
-                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" alt="Unit Terawat">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                        <div class="w-10 h-1 bg-accent mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Unit Terawat</h3>
-                    </div>
-                </div>
-                <div class="relative w-[300px] h-[200px] sm:w-[380px] sm:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800">
-                    <img src="https://images.unsplash.com/photo-1469285994282-454ceb49e63c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" alt="Driver Profesional">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                        <div class="w-10 h-1 bg-accent mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Driver Profesional</h3>
-                    </div>
-                </div>
-                <div class="relative w-[300px] h-[200px] sm:w-[380px] sm:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800">
-                    <img src="https://images.unsplash.com/photo-1502877338535-349c67426541?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" alt="Layanan Terbaik">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                        <div class="w-10 h-1 bg-accent mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Layanan Terbaik</h3>
-                    </div>
-                </div>
-                <div class="relative w-[300px] h-[200px] sm:w-[380px] sm:h-[240px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0 snap-center group cursor-pointer border border-gray-200 dark:border-gray-800">
-                    <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" alt="Membership Support">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                        <div class="w-10 h-1 bg-accent mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <h3 class="text-white text-xl sm:text-2xl font-bold tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Membership Support</h3>
-                    </div>
-                </div>
+            <div class="text-center border-t border-gray-200 dark:border-gray-800 pt-8 text-sm text-gray-500 font-medium">
+                &copy; <span id="year"></span> RJM Rentcar. All rights reserved.
             </div>
-
-            <div class="mt-8 flex flex-col items-center justify-center">
-                <div class="flex gap-1 text-yellow-400 mb-2">
-                    <svg class="w-8 h-8 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="w-8 h-8 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="w-8 h-8 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="w-8 h-8 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="w-8 h-8 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                </div>
-                <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-semibold tracking-wide">
-                    Rating 5.0 dari Ratusan Pelanggan Setia RJM
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white dark:bg-darkbg py-16 sm:py-24 px-5 ornament-bg relative">
-        <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-gray-50 dark:from-[#0f0f0f] to-transparent"></div>
-        <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-gray-100 dark:from-[#0f0f0f] to-transparent"></div>
-        
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 relative z-10">
-            <div class="bg-white dark:bg-[#111] p-8 sm:p-10 border-t-4 border-accent shadow-2xl rounded-xl animate-fade-in-slide-up delay-100 hover:-translate-y-2 transition-transform duration-300 group">
-                <div class="flex items-center gap-4 mb-6">
-                    <h2 class="text-3xl font-bold uppercase tracking-wide text-gray-900 dark:text-white">Visi Kami</h2>
-                </div>
-                <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-                    Menjadi perusahaan penyedia jasa rental mobil nomor satu yang <strong class="text-accent">menguasai seluruh pasar mobilitas di wilayah Aceh</strong>, serta menjadi standar utama dalam keandalan dan profesionalisme layanan transportasi yang tepercaya.
-                </p>
-            </div>
-            <div class="bg-black dark:bg-[#111] text-gray-100 p-8 sm:p-10 border-t-4 border-gray-700 dark:border-gray-700 shadow-2xl rounded-xl animate-fade-in-slide-up delay-200 hover:-translate-y-2 transition-transform duration-300 group">
-                <div class="flex items-center gap-4 mb-6">
-                    <h2 class="text-3xl font-bold uppercase tracking-wide text-white">Misi Kami</h2>
-                </div>
-                <ul class="space-y-4 text-gray-300 dark:text-gray-400 text-lg">
-                    <li class="flex items-start gap-3"><span class="text-accent mt-1">●</span> Memberikan pelayanan prima dan responsif 24/7 kepada seluruh pelanggan di Aceh.</li>
-                    <li class="flex items-start gap-3"><span class="text-accent mt-1">●</span> Menyediakan armada mobil yang selalu bersih, terawat, dan dalam performa maksimal.</li>
-                    <li class="flex items-start gap-3"><span class="text-accent mt-1">●</span> Menawarkan harga sewa yang kompetitif tanpa mengorbankan kualitas layanan.</li>
-                    <li class="flex items-start gap-3"><span class="text-accent mt-1">●</span> Memajukan pariwisata Aceh melalui dukungan transportasi yang andal.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100 dark:bg-[#0f0f0f] py-16 sm:py-24 px-5">
-        <div class="container mx-auto text-center mb-12 animate-fade-in-slide-up delay-100">
-            <h2 class="text-3xl font-bold border-b-2 border-accent inline-block pb-2 mb-4 uppercase tracking-widest text-gray-900 dark:text-white">Jelajahi Aceh Bersama Kami</h2>
-            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">RJM Rentcar siap mengantarkan Anda menikmati pesona wisata alam, budaya, dan sejarah terbaik di Nanggroe Aceh Darussalam.</p>
-        </div>
-
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-slide-up delay-200">
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer h-72 border border-gray-200 dark:border-gray-800">
-                <div class="w-full h-full overflow-hidden bg-gray-300 dark:bg-gray-800">
-                    <img src="images/pantai_lhoknga.jpeg" alt="Pantai Lhoknga" class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-white text-2xl font-bold mb-1 group-hover:text-accent transition-colors">Pantai Lhoknga</h3>
-                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Pesona ombak eksotis dan pasir putih yang memanjakan mata.</p>
-                </div>
-            </div>
-
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer h-72 border border-gray-200 dark:border-gray-800">
-                <div class="w-full h-full overflow-hidden bg-gray-300 dark:bg-gray-800">
-                    <img src="images/Mesjid_raya.jpg" alt="Masjid Raya Baiturrahman" class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-white text-2xl font-bold mb-1 group-hover:text-accent transition-colors">Masjid Raya Baiturrahman</h3>
-                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Ikon kebanggaan dan pusat peradaban Islam di Serambi Mekkah.</p>
-                </div>
-            </div>
-
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer h-72 border border-gray-200 dark:border-gray-800">
-                <div class="w-full h-full overflow-hidden bg-gray-300 dark:bg-gray-800">
-                    <img src="images/Museum_tsunami.jpg" alt="Museum Tsunami Aceh" class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-white text-2xl font-bold mb-1 group-hover:text-accent transition-colors">Museum Tsunami</h3>
-                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Monumen bersejarah yang penuh haru rancangan Ridwan Kamil.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white dark:bg-darkbg py-16 sm:py-20 px-5 border-t border-gray-100 dark:border-gray-900">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center animate-fade-in-slide-up delay-300">
-            
-            <div id="social-media" class="bg-gray-50 dark:bg-[#111] p-8 sm:p-10 border border-gray-200 dark:border-gray-800 shadow-xl rounded-2xl scroll-mt-24">
-                <h2 class="text-3xl font-bold mb-5 uppercase tracking-wide text-accent">Find Our Content</h2>
-                <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg">Ikuti perjalanan, update armada terbaru, dan penawaran menarik kami melalui media sosial. Jangan lewatkan update terbaru dari RJM Rentcar!</p>
-                
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://instagram.com/akun_kamu" target="_blank" class="flex items-center justify-center gap-2.5 px-8 py-4 border-2 border-black dark:border-gray-500 text-black dark:text-white font-bold rounded-full hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:border-accent dark:hover:text-black transition-all duration-300 group shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition-transform duration-300">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        Instagram
-                    </a>
-                    
-                    <a href="https://tiktok.com/@akun_kamu" target="_blank" class="flex items-center justify-center gap-2.5 px-8 py-4 border-2 border-black dark:border-gray-500 text-black dark:text-white font-bold rounded-full hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:border-accent dark:hover:text-black transition-all duration-300 group shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition-transform duration-300">
-                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                        </svg>
-                        TikTok
-                    </a>
-                </div>
-            </div>
-
-            <div id="lokasi" class="bg-white dark:bg-[#111] p-8 sm:p-10 border border-gray-200 dark:border-gray-800 shadow-2xl rounded-2xl group scroll-mt-24">
-                <h2 class="text-3xl font-bold mb-5 uppercase tracking-wide border-b-2 border-gray-900 dark:border-gray-500 inline-block pb-2 text-gray-900 dark:text-white">Lokasi Kami</h2>
-                <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg">Kunjungi pool atau kantor kami untuk melihat langsung armada RJM Rentcar yang terawat.</p>
-                
-                <div class="w-full h-56 sm:h-64 bg-gray-200 dark:bg-gray-800 rounded-xl overflow-hidden shadow-xl border-4 border-black dark:border-gray-700 group-hover:border-accent transition-colors duration-300">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.1090623315754!2d95.31758651476595!3d5.550130095975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040377aa33b49cb%3A0x644265cb2a18eb4c!2sBanda%20Aceh%2C%20Kota%20Banda%20Aceh%2C%20Aceh!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="bg-black text-gray-400 p-6 sm:p-8 mt-auto border-t border-gray-900">
-        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 sm:gap-0">
-            <p>© 2026 <span class="text-accent font-semibold">RJM Rentcar</span>. Hak Cipta Dilindungi.</p>
-            <p class="text-sm">Layanan Sewa Mobil Tepercaya di Banda Aceh.</p>
         </div>
     </footer>
 
     <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+
+        // 1. Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('opacity-100', 'z-10');
+                slide.classList.add('opacity-0', 'z-0');
+                if(indicators[i]) {
+                    indicators[i].classList.remove('bg-accent', 'w-10');
+                    indicators[i].classList.add('bg-gray-300', 'dark:bg-gray-600', 'w-2.5');
+                }
+            });
+
+            slides[index].classList.remove('opacity-0', 'z-0');
+            slides[index].classList.add('opacity-100', 'z-10');
+            
+            if(indicators[index]) {
+                indicators[index].classList.remove('bg-gray-300', 'dark:bg-gray-600', 'w-2.5');
+                indicators[index].classList.add('bg-accent', 'w-10');
+            }
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function startInterval() { slideInterval = setInterval(nextSlide, 5000); }
+        function resetInterval() { clearInterval(slideInterval); startInterval(); }
+        startInterval();
+
+        // 2. Dark Mode Setup
         function setupThemeToggle(btnId, darkIconId, lightIconId) {
             const btn = document.getElementById(btnId);
             const darkIcon = document.getElementById(darkIconId);
             const lightIcon = document.getElementById(lightIconId);
+            if (!btn || !darkIcon || !lightIcon) return;
             const htmlEl = document.documentElement;
-
-            if (htmlEl.classList.contains('dark')) {
-                lightIcon.classList.remove('hidden');
-            } else {
-                darkIcon.classList.remove('hidden');
-            }
+            
+            if (htmlEl.classList.contains('dark')) lightIcon.classList.remove('hidden');
+            else darkIcon.classList.remove('hidden');
 
             btn.addEventListener('click', function() {
                 darkIcon.classList.toggle('hidden');
                 lightIcon.classList.toggle('hidden');
-
                 if (localStorage.getItem('color-theme')) {
                     if (localStorage.getItem('color-theme') === 'light') {
                         htmlEl.classList.add('dark');
@@ -376,6 +556,7 @@
         setupThemeToggle('theme-toggle', 'theme-toggle-dark-icon', 'theme-toggle-light-icon');
         setupThemeToggle('theme-toggle-mobile', 'theme-toggle-dark-icon-mobile', 'theme-toggle-light-icon-mobile');
 
+        // 3. Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -383,7 +564,6 @@
 
         function toggleMobileMenu() {
             const isClosed = mobileMenu.classList.contains('-translate-x-full');
-            
             if (isClosed) {
                 mobileMenu.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -398,7 +578,37 @@
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         closeMenuBtn.addEventListener('click', toggleMobileMenu);
         overlay.addEventListener('click', toggleMobileMenu);
-    </script>
 
+        // 4. Bilingual (ID / EN) Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+        let currentLang = localStorage.getItem('lang') || 'id';
+
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-id]').forEach(el => {
+                if(el.getAttribute(`data-${lang}`)) {
+                    el.innerHTML = el.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            // Ubah text di dalam tombol bahasa
+            if(langToggle) langToggle.innerText = lang === 'id' ? 'ID' : 'EN';
+            if(langToggleMobile) langToggleMobile.innerText = lang === 'id' ? 'ID' : 'EN';
+            
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+        }
+
+        function switchLang() {
+            currentLang = currentLang === 'id' ? 'en' : 'id';
+            updateLanguage(currentLang);
+        }
+
+        if(langToggle) langToggle.addEventListener('click', switchLang);
+        if(langToggleMobile) langToggleMobile.addEventListener('click', switchLang);
+        
+        // Panggil saat website pertama dimuat
+        updateLanguage(currentLang);
+    </script>
 </body>
 </html>
